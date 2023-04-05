@@ -16,7 +16,10 @@ export default function CSRPage() {
       <h1>This CSR request!</h1>
       <ul>
         {data.map(item => (
-          <li key={item.id}>{item.email}</li>
+          <li key={item.id}>
+         <h1>Name: {item.name}</h1>  
+          <h1>Email: {item.email}</h1> 
+            </li>
         ))}
       </ul>
     </>

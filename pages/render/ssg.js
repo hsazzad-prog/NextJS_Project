@@ -5,8 +5,11 @@ export default function SSG({ data }) {
         <>
         <h1>This SSG request!</h1>
         <ul>
-          {data.map(item => (
-            <li key={item.id}>{item.name}</li>
+        {data.map(item => (
+            <li key={item.id}>
+             <p>Name: {item.name}</p> 
+           <p>email: {item.email}</p>   
+              </li>
           ))}
         </ul>
       </>
