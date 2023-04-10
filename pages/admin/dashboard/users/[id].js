@@ -2,6 +2,7 @@ import MyLayout from "@/pages/component/layout"
 import Image from "next/image";
 import axios from "axios";
 import { useRouter } from 'next/router'
+import UserLayout from "@/pages/component/userdata";
 
 export default function UserProfile({ data } ) {
 const router = useRouter();
@@ -9,13 +10,8 @@ const router = useRouter();
       <>
       <MyLayout title="User"/>
    
-
-      <h1>Name: {data.name}</h1>
-      <h1>Email: {data.email}</h1>
-      <h1>Address: {data.address}</h1>
-      <h1>Picture: </h1>
-      <Image src={"http:/localhost:3000/admin/getimage/"+data.filename} alt="me" width="150" height="150" />
-     <br></br>
+<UserLayout data={data} /> 
+   
       <button type="button" onClick={() => router.back()}>
       Click here to go back
     </button>
