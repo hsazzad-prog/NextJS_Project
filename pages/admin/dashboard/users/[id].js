@@ -1,13 +1,14 @@
 import MyLayout from "@/pages/component/layout"
-import Image from "next/image";
 import axios from "axios";
 import { useRouter } from 'next/router'
 import UserLayout from "@/pages/component/userdata";
+import SessionCheck from '../../component/sessioncheck'
 
 export default function UserProfile({ data } ) {
 const router = useRouter();
     return (
       <>
+        <SessionCheck />
       <MyLayout title="User"/>
    
 <UserLayout data={data} /> 

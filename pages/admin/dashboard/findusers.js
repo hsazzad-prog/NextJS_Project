@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import axios from 'axios';
 import MyLayout from '@/pages/component/layout';
 import UserLayout from '@/pages/component/userdata';
+import SessionCheck from '../../component/sessioncheck'
 
 export default function MyPage({ data }) {
   const [inputValue, setInputValue] = useState();
@@ -23,6 +24,7 @@ export default function MyPage({ data }) {
 
   return (
     <>
+      <SessionCheck />
      <MyLayout />
       <form onSubmit={handleFormSubmit}>
         <input type="text" value={inputValue} onChange={handleInputChange} />
@@ -30,7 +32,10 @@ export default function MyPage({ data }) {
       </form>
       {data.status == null? 
    <UserLayout data={data}/>
-      : data.status }
+        : data.status}
+      <button type="button" onClick={() => router.back()}>
+      Click here to go back
+    </button>
     </>
   );
 }

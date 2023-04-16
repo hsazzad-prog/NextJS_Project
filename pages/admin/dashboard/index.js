@@ -1,10 +1,12 @@
 import MyLayout from "@/pages/component/layout"
 import Link from "next/link"
+import SessionCheck from '../../component/sessioncheck'
 
 export default function AdminDashboard() {
 
     return (
       <>
+        <SessionCheck />
       <MyLayout title="Admin DashBoard"/>
       <h1>Admin Dashboard</h1>
 

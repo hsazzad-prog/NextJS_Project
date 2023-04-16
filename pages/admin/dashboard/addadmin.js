@@ -2,14 +2,26 @@ import { useForm } from 'react-hook-form';
 import axios from "axios"
 import { useState } from "react"
 import MyLayout from "@/pages/component/layout"
+import { useRouter } from 'next/router'
+import SessionCheck from '../../component/sessioncheck'
 
 export default function AddAdmin() {
+    const router = useRouter();
     const {
         register,
         handleSubmit,
         formState: { errors },
         reset,
     } = useForm();
+    const validateFile = (value) => {
+        const file = value[0];
+        const allowedtypes = ["image/jpg", "image/png"];
+
+        if (!allowedtypes.includes(file.type)){
+            return false;
+        }
+        }
+
     const [success, setSuccess] = useState('')
     const onSubmit = async (data) => {
         console.log(data);
@@ -45,6 +57,7 @@ export default function AddAdmin() {
 
     return (
         <>
+            <SessionCheck />
             <MyLayout title="Add Admin" />
             <h1>Add Admin</h1>
             {success}
@@ -54,6 +67,7 @@ export default function AddAdmin() {
                     <input
                         type="text"
                         id="name"
+                
                         {...register('name', { required: true })}
                     />
                     {errors.name && <p>Name is required</p>}
@@ -84,7 +98,7 @@ export default function AddAdmin() {
                         <p>
                             {errors.password.type === 'required'
                                 ? 'password is required'
-                                : 'Invalid password address'}
+                                : 'Invalid password pattern'}
                         </p>
                     )}
                 </div>
@@ -98,12 +112,20 @@ export default function AddAdmin() {
                     <input
                         type="file"
                         id="myfile"
-                        {...register('myfile', { required: true })}
+                        {...register('myfile', { required: true, validate: validateFile })}
                     />
-                    {errors.myfile && <p>File is required</p>}
+                    {errors.myfile && 
+                    <p>
+                    {errors.myfile.type === 'required'
+                        ? 'file is required'
+                        : 'invalid file'}
+                </p>}
                 </div>
                 <button type="submit">Submit</button>
             </form>
+            <button type="button" onClick={() => router.back()}>
+      Click here to go back
+    </button>
         </>
     );
 }
