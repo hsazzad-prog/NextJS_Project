@@ -2,17 +2,19 @@ import MyLayout from "@/pages/component/layout"
 import axios from "axios";
 import { useRouter } from 'next/router'
 import UserLayout from "@/pages/component/userdata";
-import SessionCheck from '../../component/sessioncheck'
+import SessionCheck from '../../../component/sessioncheck'
+import AdminDrawer from '../../../component/admindrawer'
 
 export default function UserProfile({ data } ) {
 const router = useRouter();
     return (
       <>
         <SessionCheck />
-      <MyLayout title="User"/>
-   
+      <MyLayout title={data}/>
+        <AdminDrawer />
+      
 <UserLayout data={data} /> 
-   
+
       <button type="button" onClick={() => router.back()}>
       Click here to go back
     </button>
