@@ -35,7 +35,7 @@ export default function SignIn() {
         <section className="text-gray-600 body-font mx-auto w-96">
         <form onSubmit={handleSubmit}>
   
-    <div className="bg-gray-100 rounded-lg p-8 md:ml-auto w-auto mt-10 md:mt-0">
+    <div className="bg-blue-300 rounded-lg p-8 md:ml-auto w-auto mt-10 md:mt-0">
       <h2 className="text-gray-900 text-lg font-medium title-font mb-5">Sign In</h2>
       <div className="relative mb-4">
         <label for="full-name" className="leading-7 text-sm text-gray-600">Email</label>

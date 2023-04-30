@@ -6,7 +6,7 @@ export default function UserLayout({data})
     return(
         <>
       
-     <div className='p-4'>
+     <div className='p-28'>
 
 
 <div className="mx-auto w-72 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
