@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 export default function UserLayout(props) {
-    console.log(props.filename);
+   
     return (
         <>
 
