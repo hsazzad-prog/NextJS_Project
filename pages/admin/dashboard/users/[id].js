@@ -13,7 +13,12 @@ export default function UserProfile({ data }) {
       <MyLayout title={data.id} />
       <AdminDrawer />
 
-      <UserLayout data={data} />
+      <UserLayout
+        filename={filename}
+        name={data.name}
+        email={data.email}
+        address={data.address}
+      />
 
       <button type="button" onClick={() => router.back()}>
         Click here to go back
