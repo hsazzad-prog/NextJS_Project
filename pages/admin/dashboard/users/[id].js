@@ -10,7 +10,7 @@ export default function UserProfile({ data }) {
   return (
     <>
       <SessionCheck />
-      <MyLayout title={data} />
+      <MyLayout title={data.id} />
       <AdminDrawer />
 
       <UserLayout data={data} />

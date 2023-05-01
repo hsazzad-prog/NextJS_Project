@@ -22,7 +22,7 @@ export default function MyPage({ data }) {
       query: { inputValue: inputValue }
     });
   }
-
+  console.log (data.filename);
   return (
     <>
       <SessionCheck />
@@ -46,7 +46,7 @@ export default function MyPage({ data }) {
 
     
       {data.status == null? 
-   <UserLayout data={data}/>
+   <UserLayout  data={data}/>
         : data.status}
      
         </div>

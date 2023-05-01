@@ -6,11 +6,13 @@ const nextConfig = {
 
 module.exports = {
   images: {
+    formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: 'https://nestjsproject-production-364f.up.railway.app/',
-        port: '3000',
+        protocol: 'https',
+        hostname: 'nestjsproject-production-364f.up.railway.app',
+        port: '',
+        pathname: '/admin/getimage/**',
       },
     ],
   },
