@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import axios from 'axios';
 import MyLayout from '@/pages/component/layout';
-import UserLayout from '@/pages/component/userdata';
+import UserLayout from '@/pages/component/userlayout';
 import SessionCheck from '../../component/sessioncheck'
 import AdminDrawer from '../../component/admindrawer'
 import Footer from "../../../pages/component/footer"

@@ -4,15 +4,15 @@ import SessionCheck from '../../component/sessioncheck'
 import AdminDrawer from '../../component/admindrawer'
 
 export default function AdminDashboard() {
-  
-  
-    return (
-      <>
-        <SessionCheck />
-      
-        <MyLayout title="Admin DashBoard" />
-   
-        <AdminDrawer />
-      </>
-    )
-  }
+
+
+  return (
+    <>
+      <SessionCheck />
+
+      <MyLayout title="Admin DashBoard" />
+
+      <AdminDrawer />
+    </>
+  )
+}
