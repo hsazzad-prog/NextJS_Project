@@ -46,7 +46,10 @@ export default function MyPage({ data }) {
 
     
       {data.status == null? 
-   <UserLayout  data={data}/>
+   <UserLayout  filename={filename}
+   name={data.name}
+   email={data.email}
+   address={data.address}/>
         : data.status}
      
         </div>
