@@ -34,7 +34,7 @@ export default function AddAdmin() {
         formData.append('myfile', data.myfile[0]);
         console.log(formData);
         try {
-            const response = await axios.post("http://localhost:3000/admin/insertadmin",
+            const response = await axios.post("https://nestjsproject-production-364f.up.railway.app/admin/insertadmin",
                 formData, {
                 headers: {
                     "Content-Type": "multipart/form-data"

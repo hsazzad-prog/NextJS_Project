@@ -26,7 +26,7 @@ const router = useRouter();
  export async function getServerSideProps(context) {
  const id=context.params.id;
 
-    const response = await axios.get('http://localhost:3000/admin/findadmin/'+id);
+    const response = await axios.get('https://nestjsproject-production-364f.up.railway.app/admin/findadmin/'+id);
     const data = await response.data;
    
 return { props: { data } }
