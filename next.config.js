@@ -11,7 +11,7 @@ module.exports = {
       {
         protocol: 'https',
         hostname: 'nestjsproject-production-364f.up.railway.app',
-        port: '',
+        port: '3000',
       },
     ],
   },
