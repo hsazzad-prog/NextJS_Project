@@ -46,7 +46,7 @@ export default function MyPage({ data }) {
 
     
       {data.status == null? 
-   <UserLayout  filename={filename}
+   <UserLayout  filename={data.filename}
    name={data.name}
    email={data.email}
    address={data.address}/>
